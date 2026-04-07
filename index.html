@@ -170,7 +170,56 @@
   .toast.green { background: #1a6b3c; }
   .toast.red { background: #8b1a1a; }
 
-  /* ANIMATIONS */
+  /* STORIES */
+  #stories { background: var(--ink); padding: 80px 0 80px 6vw; overflow: hidden; }
+  #stories .section-label { color: var(--teal-light); }
+  #stories .section-title { color: white; }
+  #stories .section-sub { color: rgba(255,255,255,0.5); margin-bottom: 40px; }
+  .stories-header { display: flex; align-items: flex-end; justify-content: space-between; padding-right: 6vw; margin-bottom: 36px; flex-wrap: wrap; gap: 16px; }
+  .stories-scroll-wrap { position: relative; }
+  .stories-track {
+    display: flex; gap: 20px; overflow-x: auto; padding-bottom: 16px; padding-right: 6vw;
+    scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; cursor: grab;
+  }
+  .stories-track:active { cursor: grabbing; }
+  .stories-track::-webkit-scrollbar { height: 4px; }
+  .stories-track::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 4px; }
+  .stories-track::-webkit-scrollbar-thumb { background: var(--teal); border-radius: 4px; }
+  .story-card {
+    flex-shrink: 0; width: 280px; border-radius: 20px; overflow: hidden;
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08);
+    scroll-snap-align: start; transition: transform 0.3s;
+    position: relative;
+  }
+  .story-card:hover { transform: translateY(-6px); }
+  .story-media { width: 100%; height: 200px; object-fit: cover; display: block; background: rgba(75,191,191,0.1); }
+  .story-media-video { width: 100%; height: 200px; object-fit: cover; display: block; background: #000; }
+  .story-body { padding: 18px 20px 20px; }
+  .story-biz-tag { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--teal); margin-bottom: 8px; }
+  .story-caption { font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.75); font-weight: 300; }
+  .story-date { font-size: 11px; color: rgba(255,255,255,0.3); margin-top: 10px; }
+  .story-delete-btn { position: absolute; top: 10px; right: 10px; background: rgba(139,26,26,0.85); border: none; color: white; width: 28px; height: 28px; border-radius: 50%; font-size: 13px; cursor: pointer; display: none; align-items: center; justify-content: center; transition: background 0.2s; }
+  .story-delete-btn:hover { background: #c0392b; }
+  .admin-logged-in .story-delete-btn { display: flex; }
+  .story-empty { flex-shrink: 0; width: 280px; height: 280px; border-radius: 20px; border: 2px dashed rgba(75,191,191,0.2); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: rgba(255,255,255,0.3); font-size: 13px; }
+  .scroll-arrows { display: flex; gap: 10px; }
+  .scroll-arrow { width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid rgba(255,255,255,0.15); background: transparent; color: rgba(255,255,255,0.6); font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+  .scroll-arrow:hover { border-color: var(--teal); color: var(--teal); }
+
+  /* ADMIN LOGIN MODAL */
+  .admin-modal { max-width: 400px; }
+  .admin-modal h2 { font-family: 'Syne', sans-serif; font-size: 24px; font-weight: 800; color: var(--ink); margin-bottom: 6px; }
+  .admin-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(75,191,191,0.1); color: var(--teal-dark); font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 100px; margin-bottom: 24px; }
+  .admin-nav-btn { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.5); background: none; border: 1.5px solid rgba(255,255,255,0.15); padding: 7px 16px; border-radius: 100px; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all 0.2s; }
+  .admin-nav-btn:hover { color: white; border-color: rgba(255,255,255,0.4); }
+  .admin-nav-btn.logged-in { color: var(--teal); border-color: var(--teal); }
+
+  /* POST STORY MODAL */
+  .post-modal { max-width: 520px; }
+  .media-preview { width: 100%; height: 200px; border-radius: 12px; background: var(--mist); display: flex; align-items: center; justify-content: center; overflow: hidden; margin-bottom: 4px; border: 1.5px dashed rgba(75,191,191,0.3); }
+  .media-preview img, .media-preview video { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
+  .media-placeholder { color: var(--grey); font-size: 13px; text-align: center; }
+  .media-placeholder div { font-size: 32px; margin-bottom: 8px; }
   @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
   @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.85); } }
   @keyframes modalIn { from { opacity: 0; transform: scale(0.95) translateY(16px); } to { opacity: 1; transform: scale(1) translateY(0); } }
@@ -199,6 +248,7 @@
   <ul class="nav-links" id="navLinks">
     <li><a href="#services" onclick="closeNav()">Services</a></li>
     <li><a href="#businesses" onclick="closeNav()">Our Clients</a></li>
+    <li><a href="#stories" onclick="closeNav()">Stories</a></li>
     <li><a href="#why" onclick="closeNav()">Why Us</a></li>
     <li><a href="#contact" onclick="closeNav()">Contact</a></li>
     <li><a href="#contact" class="nav-cta" onclick="closeNav()">Get Started</a></li>
@@ -327,6 +377,33 @@
   </div>
 </section>
 
+<!-- STORIES -->
+<section id="stories">
+  <div class="stories-header">
+    <div>
+      <div class="section-label">In The Spotlight</div>
+      <div class="section-title">Brand Stories</div>
+      <div class="section-sub">Behind the scenes moments, launches and highlights from the businesses we work with.</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px;padding-right:0;">
+      <div class="scroll-arrows">
+        <button class="scroll-arrow" onclick="scrollStories(-1)" title="Previous">&#8592;</button>
+        <button class="scroll-arrow" onclick="scrollStories(1)" title="Next">&#8594;</button>
+      </div>
+      <button class="admin-nav-btn" id="adminNavBtn" onclick="openAdminLogin()">&#x1F512; Admin</button>
+    </div>
+  </div>
+  <div class="stories-scroll-wrap">
+    <div class="stories-track" id="storiesTrack">
+      <!-- Stories injected by JS -->
+      <div class="story-empty" id="storiesEmpty">
+        <div style="font-size:32px;">📸</div>
+        <span>No stories posted yet</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- WHY -->
 <section id="why">
   <div>
@@ -349,9 +426,9 @@
       <div class="section-label">Get In Touch</div>
       <div class="section-title">Let's Grow Your Brand</div>
       <div class="section-sub" style="margin-bottom:36px">Whether you want to list your business, hire us for a campaign, or just say hello — we'd love to hear from you.</div>
-      <a href="mailto:Pulasign96@gmail.com" class="contact-info-item">
+      <a href="/cdn-cgi/l/email-protection#91c1e4fdf0e2f8f6ffa8a7d1f6fcf0f8fdbff2fefc" class="contact-info-item">
         <div class="ci-icon">📧</div>
-        <div><div class="ci-label">Email</div><div class="ci-value">Pulasign96@gmail.com</div></div>
+        <div><div class="ci-label">Email</div><div class="ci-value"><span class="__cf_email__" data-cfemail="e7b7928b86948e8089ded1a7808a868e8bc984888a">[email&#160;protected]</span></div></div>
       </a>
       <a href="tel:+26774430806" class="contact-info-item">
         <div class="ci-icon">📱</div>
@@ -400,6 +477,7 @@
   <div style="display:flex;gap:20px;">
     <a href="#services">Services</a>
     <a href="#businesses">Clients</a>
+    <a href="#stories">Stories</a>
     <a href="#contact">Contact</a>
   </div>
 </footer>
@@ -490,10 +568,60 @@
   </div>
 </div>
 
+<!-- ADMIN LOGIN MODAL -->
+<div class="modal-overlay" id="adminLoginModal" onclick="overlayClose(event,'adminLoginModal')">
+  <div class="modal admin-modal">
+    <button class="modal-close" onclick="closeModal('adminLoginModal')">&#x2715;</button>
+    <div style="font-size:36px;margin-bottom:12px;">&#x1F512;</div>
+    <h2>Admin Login</h2>
+    <div class="admin-badge">&#x1F6E1; Pulasign Staff Only</div>
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div class="form-group">
+        <label class="form-label">Username</label>
+        <input class="form-input" id="adminUser" type="text" placeholder="admin">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Password</label>
+        <input class="form-input" id="adminPass" type="password" placeholder="••••••••">
+      </div>
+      <button class="btn-primary" onclick="doAdminLogin()" style="margin-top:4px;">Login →</button>
+      <p id="loginError" style="color:#c0392b;font-size:13px;display:none;text-align:center;">Incorrect username or password.</p>
+    </div>
+  </div>
+</div>
+
+<!-- POST STORY MODAL -->
+<div class="modal-overlay" id="postStoryModal" onclick="overlayClose(event,'postStoryModal')">
+  <div class="modal post-modal">
+    <button class="modal-close" onclick="closeModal('postStoryModal')">&#x2715;</button>
+    <div style="font-size:32px;margin-bottom:12px;">📸</div>
+    <h2 style="font-family:'Syne',sans-serif;font-size:24px;font-weight:800;color:var(--ink);margin-bottom:6px;">Post a Story</h2>
+    <p style="font-size:14px;color:var(--grey);margin-bottom:24px;">Share a photo or video about a business you work with.</p>
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div class="form-group">
+        <label class="form-label">Photo or Video *</label>
+        <div class="media-preview" id="mediaPreview">
+          <div class="media-placeholder"><div>🖼️</div>No media selected</div>
+        </div>
+        <input type="file" id="storyMedia" accept="image/*,video/*" onchange="previewMedia(this)" style="margin-top:8px;font-size:13px;color:var(--grey);">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Business Name *</label>
+        <input class="form-input" id="storyBiz" type="text" placeholder="e.g. Green Plate Café">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Caption</label>
+        <textarea class="form-textarea" id="storyCaption" placeholder="Tell the story behind this moment..." style="min-height:80px;"></textarea>
+      </div>
+      <button class="btn-primary" onclick="postStory()" id="postStoryBtn">Post Story →</button>
+    </div>
+  </div>
+</div>
+
 <!-- TOAST -->
 <div class="toast" id="toast"></div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // ══════════════════════════════════════════
   // SUPABASE CONFIG
   // ══════════════════════════════════════════
@@ -750,8 +878,190 @@
   }
 
   // ══════════════════════════════════════════
-  // ADD SERVICE
+  // STORIES & ADMIN
   // ══════════════════════════════════════════
+
+  // Admin credentials — change these to your own
+  var ADMIN_USER = 'pulasign';
+  var ADMIN_PASS = 'pula2026';
+  var isAdminLoggedIn = false;
+  var stories = []; // { id, biz, caption, mediaData, mediaType, date }
+
+  function openAdminLogin() {
+    if (isAdminLoggedIn) {
+      // Already logged in — show post modal directly
+      openPostStory();
+    } else {
+      document.getElementById('adminUser').value = '';
+      document.getElementById('adminPass').value = '';
+      document.getElementById('loginError').style.display = 'none';
+      openModalById('adminLoginModal');
+    }
+  }
+
+  function doAdminLogin() {
+    var user = document.getElementById('adminUser').value.trim();
+    var pass = document.getElementById('adminPass').value;
+    if (user === ADMIN_USER && pass === ADMIN_PASS) {
+      isAdminLoggedIn = true;
+      closeModal('adminLoginModal');
+      document.body.classList.add('admin-logged-in');
+      var btn = document.getElementById('adminNavBtn');
+      if (btn) { btn.textContent = '+ Post Story'; btn.classList.add('logged-in'); btn.onclick = openPostStory; }
+      toast('Welcome back, Admin!', 'green');
+      // Show logout option in nav
+      addLogoutBtn();
+    } else {
+      document.getElementById('loginError').style.display = 'block';
+    }
+  }
+
+  function addLogoutBtn() {
+    if (document.getElementById('logoutBtn')) return;
+    var btn = document.createElement('button');
+    btn.id = 'logoutBtn';
+    btn.className = 'admin-nav-btn';
+    btn.textContent = 'Logout';
+    btn.style.marginLeft = '8px';
+    btn.onclick = doAdminLogout;
+    var adminBtn = document.getElementById('adminNavBtn');
+    if (adminBtn && adminBtn.parentNode) adminBtn.parentNode.appendChild(btn);
+  }
+
+  function doAdminLogout() {
+    isAdminLoggedIn = false;
+    document.body.classList.remove('admin-logged-in');
+    var btn = document.getElementById('adminNavBtn');
+    if (btn) { btn.textContent = '🔒 Admin'; btn.classList.remove('logged-in'); btn.onclick = openAdminLogin; }
+    var lb = document.getElementById('logoutBtn');
+    if (lb) lb.remove();
+    toast('Logged out.', '');
+  }
+
+  function openPostStory() {
+    if (!isAdminLoggedIn) { openAdminLogin(); return; }
+    document.getElementById('storyBiz').value = '';
+    document.getElementById('storyCaption').value = '';
+    document.getElementById('storyMedia').value = '';
+    document.getElementById('mediaPreview').innerHTML = '<div class="media-placeholder"><div>🖼️</div>No media selected</div>';
+    openModalById('postStoryModal');
+  }
+
+  function previewMedia(input) {
+    var file = input.files[0];
+    if (!file) return;
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      var preview = document.getElementById('mediaPreview');
+      if (file.type.startsWith('video/')) {
+        preview.innerHTML = '<video src="'+e.target.result+'" controls style="width:100%;height:100%;object-fit:cover;border-radius:12px;"></video>';
+      } else {
+        preview.innerHTML = '<img src="'+e.target.result+'" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">';
+      }
+    };
+    reader.readAsDataURL(file);
+  }
+
+  function postStory() {
+    if (!isAdminLoggedIn) return;
+    var biz     = document.getElementById('storyBiz').value.trim();
+    var caption = document.getElementById('storyCaption').value.trim();
+    var fileInput = document.getElementById('storyMedia');
+    var file    = fileInput.files[0];
+
+    if (!biz)  { toast('Please enter a business name', 'red'); return; }
+    if (!file) { toast('Please select a photo or video', 'red'); return; }
+
+    var btn = document.getElementById('postStoryBtn');
+    btn.textContent = 'Posting...';
+    btn.disabled = true;
+
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      var story = {
+        id:        'story_' + Date.now(),
+        biz:       biz,
+        caption:   caption,
+        mediaData: e.target.result,
+        mediaType: file.type.startsWith('video/') ? 'video' : 'image',
+        date:      new Date().toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' })
+      };
+      stories.push(story);
+      renderStory(story);
+      closeModal('postStoryModal');
+      toast('Story posted!', 'green');
+      btn.textContent = 'Post Story →';
+      btn.disabled = false;
+    };
+    reader.readAsDataURL(file);
+  }
+
+  function renderStory(story) {
+    // Hide empty placeholder
+    var empty = document.getElementById('storiesEmpty');
+    if (empty) empty.style.display = 'none';
+
+    var track = document.getElementById('storiesTrack');
+    var card  = document.createElement('div');
+    card.className = 'story-card';
+    card.id = story.id;
+
+    var mediaHTML = story.mediaType === 'video'
+      ? '<video class="story-media-video" src="'+story.mediaData+'" controls playsinline></video>'
+      : '<img class="story-media" src="'+story.mediaData+'" alt="'+story.biz+'">';
+
+    card.innerHTML =
+      '<button class="story-delete-btn" title="Delete story" onclick="deleteStory(\''+story.id+'\')">&#x2715;</button>'+
+      mediaHTML +
+      '<div class="story-body">'+
+        '<div class="story-biz-tag">'+story.biz+'</div>'+
+        (story.caption ? '<div class="story-caption">'+story.caption+'</div>' : '')+
+        '<div class="story-date">'+story.date+'</div>'+
+      '</div>';
+
+    // Insert before the empty card
+    var empty = document.getElementById('storiesEmpty');
+    if (empty) track.insertBefore(card, empty); else track.appendChild(card);
+  }
+
+  function deleteStory(id) {
+    if (!isAdminLoggedIn) return;
+    if (!confirm('Delete this story?')) return;
+    stories = stories.filter(function(s){ return s.id !== id; });
+    var card = document.getElementById(id);
+    if (card) card.remove();
+    if (stories.length === 0) {
+      var empty = document.getElementById('storiesEmpty');
+      if (empty) empty.style.display = 'flex';
+    }
+    toast('Story deleted.', '');
+  }
+
+  // Horizontal scroll arrows
+  function scrollStories(dir) {
+    var track = document.getElementById('storiesTrack');
+    if (track) track.scrollBy({ left: dir * 320, behavior: 'smooth' });
+  }
+
+  // Drag to scroll
+  (function() {
+    var track = document.getElementById('storiesTrack');
+    if (!track) return;
+    var isDown = false, startX, scrollLeft;
+    track.addEventListener('mousedown', function(e) {
+      isDown = true; startX = e.pageX - track.offsetLeft; scrollLeft = track.scrollLeft;
+    });
+    track.addEventListener('mouseleave', function() { isDown = false; });
+    track.addEventListener('mouseup',    function() { isDown = false; });
+    track.addEventListener('mousemove',  function(e) {
+      if (!isDown) return;
+      e.preventDefault();
+      var x    = e.pageX - track.offsetLeft;
+      var walk = (x - startX) * 1.5;
+      track.scrollLeft = scrollLeft - walk;
+    });
+  })();
+
   function showAddServiceModal() {
     ['as_name','as_desc','as_icon'].forEach(function(id){
       var e = document.getElementById(id); if (e) e.value = '';
@@ -768,11 +1078,4 @@
     var add  = document.getElementById('addServiceCard');
     var card = document.createElement('div');
     card.className = 'service-card';
-    card.innerHTML = '<div class="service-icon">'+icon+'</div><div class="service-name">'+name+'</div><div class="service-desc">'+desc+'</div><span class="service-tag">New Service</span>';
-    grid.insertBefore(card, add);
-    closeModal('addSvcModal');
-    toast('"' + name + '" added to services!', 'green');
-  }
-</script>
-</body>
-</html>
+    card.innerHTML = '<div class="service-icon">'+icon+'</div><div class="service-name">'+name+'
