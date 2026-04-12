@@ -547,16 +547,33 @@ async function dbSave(table, data) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+       async function dbSave(table, data) {
+  try {
+    var r = await fetch(SUPA_URL + '/rest/v1/' + table, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
         'apikey': SUPA_KEY,
         'Authorization': 'Bearer ' + SUPA_KEY,
-        'Prefer': 'return=minimal'
+        'Prefer': 'return=representation'
       },
       body: JSON.stringify(data)
     });
-    return r.ok;
-  } catch(e) { console.error('dbSave error:', e); return false; }
-}
 
+    const resText = await r.text();
+
+    if (!r.ok) {
+      console.error('Supabase DB error:', resText);
+      throw new Error(resText);
+    }
+
+    return true;
+
+  } catch(e) {
+    console.error('dbSave error:', e);
+    throw e; // 🔥 THIS is key
+  }
+}
 // ═══════════════════════════════════════════════════
 // SUPABASE — delete story record
 // ═══════════════════════════════════════════════════
