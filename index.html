@@ -10,8 +10,6 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);overflow-x:hidden;}
-
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:18px 6vw;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(75,191,191,0.15);}
 .nav-logo{text-decoration:none;}
 .nav-logo-text{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;color:var(--teal);letter-spacing:-1px;}
@@ -22,8 +20,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .nav-cta:hover{background:var(--teal-dark)!important;}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
 .hamburger span{width:24px;height:2px;background:var(--ink);border-radius:2px;display:block;}
-
-/* HERO */
 .hero{min-height:100vh;display:flex;align-items:center;padding:120px 6vw 80px;position:relative;overflow:hidden;background:linear-gradient(135deg,#f0f9f9 0%,#e8f5f5 40%,#fafefe 100%);}
 .hero-bg{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(75,191,191,.12) 0%,transparent 70%);right:-200px;top:-100px;pointer-events:none;}
 .hero-bg2{position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(75,191,191,.08) 0%,transparent 70%);left:-100px;bottom:-50px;pointer-events:none;}
@@ -34,29 +30,21 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .hero h1 em{font-style:normal;color:var(--teal);}
 .hero p{font-size:18px;line-height:1.65;color:#4a6b6b;font-weight:300;margin-bottom:40px;max-width:500px;}
 .hero-actions{display:flex;gap:16px;flex-wrap:wrap;}
-
-/* BUTTONS */
 .btn{background:var(--teal);color:#fff;padding:14px 32px;border-radius:100px;font-size:15px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all .25s;border:2px solid var(--teal);cursor:pointer;font-family:'DM Sans',sans-serif;}
 .btn:hover{background:var(--teal-dark);border-color:var(--teal-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(75,191,191,.35);}
 .btn-outline{background:transparent;color:var(--ink);border:2px solid rgba(15,32,32,.2);}
 .btn-outline:hover{border-color:var(--teal);color:var(--teal);background:transparent;box-shadow:none;}
-
-/* STATS */
 .stats-bar{background:var(--ink);padding:40px 6vw;display:flex;justify-content:space-between;flex-wrap:wrap;gap:32px;}
 .stat-item{text-align:center;flex:1;min-width:120px;}
 .stat-num{font-family:'Syne',sans-serif;font-size:36px;font-weight:800;color:var(--teal);}
 .stat-lbl{font-size:13px;color:rgba(255,255,255,.5);font-weight:300;margin-top:4px;text-transform:uppercase;letter-spacing:1px;}
-
-/* SECTIONS */
 section{padding:100px 6vw;}
 .sec-label{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:var(--teal);margin-bottom:16px;}
 .sec-title{font-family:'Syne',sans-serif;font-size:clamp(30px,4vw,48px);font-weight:800;letter-spacing:-1.5px;color:var(--ink);line-height:1.1;margin-bottom:16px;}
 .sec-sub{font-size:17px;font-weight:300;color:#4a6b6b;max-width:560px;line-height:1.65;}
-
-/* SERVICES */
 #services{background:var(--mist);}
-.services-hdr{margin-bottom:60px;}
-.services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;}
+.svc-hdr{margin-bottom:60px;}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;}
 .svc-card{background:#fff;border-radius:20px;padding:36px 32px;border:1px solid rgba(75,191,191,.1);transition:all .3s;position:relative;overflow:hidden;}
 .svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal),var(--teal-light));opacity:0;transition:opacity .3s;}
 .svc-card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(75,191,191,.15);}
@@ -68,8 +56,6 @@ section{padding:100px 6vw;}
 .svc-add{background:transparent!important;border:2px dashed rgba(75,191,191,.3)!important;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--grey);font-size:14px;font-weight:500;min-height:220px;cursor:pointer;}
 .svc-add-icon{width:44px;height:44px;border:2px dashed rgba(75,191,191,.4);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--teal);}
 .svc-add:hover{border-color:var(--teal)!important;color:var(--teal);transform:translateY(-4px);}
-
-/* BUSINESSES */
 #businesses{background:#fff;}
 .biz-hdr{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:56px;}
 .biz-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:28px;}
@@ -90,9 +76,7 @@ section{padding:100px 6vw;}
 .biz-view{font-size:13px;font-weight:600;color:var(--teal);}
 .add-biz{border:2px dashed rgba(75,191,191,.3);background:transparent;display:flex;align-items:center;justify-content:center;min-height:280px;cursor:pointer;transition:all .3s;border-radius:24px;}
 .add-biz:hover{border-color:var(--teal);transform:translateY(-4px);}
-
-/* STORIES */
-#stories{background:var(--ink);padding:80px 0 80px 6vw;overflow:hidden;}
+#stories-section{background:var(--ink);padding:80px 0 80px 6vw;overflow:hidden;}
 .stories-hdr{display:flex;align-items:flex-end;justify-content:space-between;padding-right:6vw;margin-bottom:36px;flex-wrap:wrap;gap:16px;}
 .stories-track{display:flex;gap:20px;overflow-x:auto;padding-bottom:16px;padding-right:6vw;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;cursor:grab;}
 .stories-track:active{cursor:grabbing;}
@@ -119,8 +103,7 @@ body.admin-on .story-del{display:flex;}
 .admin-btn.active{color:var(--teal);border-color:var(--teal);}
 .logout-btn{font-size:12px;font-weight:500;color:rgba(255,255,255,.35);background:none;border:1px solid rgba(255,255,255,.1);padding:6px 14px;border-radius:100px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;margin-left:8px;}
 .logout-btn:hover{color:rgba(255,255,255,.7);}
-
-/* WHY */
+.stories-loading{color:rgba(255,255,255,.4);font-size:14px;padding:20px 0;}
 #why{background:var(--ink);color:#fff;}
 #why .sec-title{color:#fff;}
 #why .sec-sub{color:rgba(255,255,255,.5);}
@@ -130,8 +113,6 @@ body.admin-on .story-del{display:flex;}
 .why-num{font-family:'Syne',sans-serif;font-size:36px;font-weight:800;color:rgba(75,191,191,.3);line-height:1;flex-shrink:0;}
 .why-text h3{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:#fff;margin-bottom:8px;}
 .why-text p{font-size:14px;line-height:1.7;color:rgba(255,255,255,.45);font-weight:300;}
-
-/* CONTACT */
 #contact{background:var(--mist);}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
 .contact-form{display:flex;flex-direction:column;gap:16px;}
@@ -146,21 +127,17 @@ body.admin-on .story-del{display:flex;}
 .ci-icon{width:42px;height:42px;border-radius:10px;background:rgba(75,191,191,.1);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
 .ci-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--grey);margin-bottom:3px;}
 .ci-value{font-size:15px;font-weight:500;color:var(--ink);}
-
-/* FOOTER */
 footer{background:var(--ink);color:rgba(255,255,255,.5);padding:48px 6vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
 .footer-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;color:#fff;letter-spacing:-1px;}
 .footer-tag{font-size:12px;color:rgba(255,255,255,.3);margin-top:4px;}
 footer p{font-size:13px;}
 footer a{color:rgba(255,255,255,.4);text-decoration:none;font-size:13px;transition:color .2s;}
 footer a:hover{color:var(--teal);}
-
-/* MODALS */
 .overlay{position:fixed;inset:0;z-index:999;background:rgba(10,26,26,.8);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;padding:20px;}
 .overlay.open{display:flex;}
 .modal{background:#fff;border-radius:28px;max-width:680px;width:100%;max-height:92vh;overflow-y:auto;padding:48px;position:relative;animation:modalIn .3s ease;}
 .modal.wide{max-width:760px;}
-.modal.narrow{max-width:440px;}
+.modal.narrow{max-width:460px;}
 .modal-x{position:absolute;top:20px;right:20px;width:36px;height:36px;border-radius:50%;background:var(--mist);border:none;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--ink);transition:background .2s;}
 .modal-x:hover{background:rgba(75,191,191,.15);}
 .modal-icon{font-size:36px;margin-bottom:16px;}
@@ -175,8 +152,6 @@ footer a:hover{color:var(--teal);}
 .detail-lbl{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--grey);margin-bottom:4px;}
 .detail-val{font-size:14px;font-weight:500;color:var(--ink);word-break:break-all;}
 .detail-val a{color:var(--teal);text-decoration:none;}
-
-/* LIST FORM */
 .list-form{display:flex;flex-direction:column;gap:16px;}
 .list-form .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
 .checks{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
@@ -188,29 +163,19 @@ footer a:hover{color:var(--teal);}
 .success-box{background:rgba(26,107,60,.1);border:1px solid rgba(26,107,60,.3);border-radius:14px;padding:20px 24px;display:flex;align-items:center;gap:16px;margin-top:8px;}
 .success-box h4{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:#1a6b3c;margin-bottom:4px;}
 .success-box p{font-size:13px;color:#2a8a4a;line-height:1.5;}
-
-/* MEDIA PREVIEW */
 .media-prev{width:100%;height:200px;border-radius:12px;background:var(--mist);display:flex;align-items:center;justify-content:center;overflow:hidden;border:1.5px dashed rgba(75,191,191,.3);}
 .media-prev img,.media-prev video{width:100%;height:100%;object-fit:cover;border-radius:12px;}
 .media-ph{color:var(--grey);font-size:13px;text-align:center;}
 .media-ph div{font-size:32px;margin-bottom:8px;}
-
-/* TOAST */
-.toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(100px);background:var(--ink);color:#fff;padding:14px 28px;border-radius:100px;font-size:14px;font-weight:500;z-index:9999;transition:transform .4s ease;box-shadow:0 8px 32px rgba(0,0,0,.25);white-space:nowrap;}
+.admin-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(75,191,191,.1);color:var(--teal-dark);font-size:12px;font-weight:600;padding:4px 12px;border-radius:100px;margin-bottom:24px;}
+.login-err{color:#c0392b;font-size:13px;display:none;text-align:center;margin-top:4px;}
+.toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(100px);background:var(--ink);color:#fff;padding:14px 28px;border-radius:100px;font-size:14px;font-weight:500;z-index:9999;transition:transform .4s ease;box-shadow:0 8px 32px rgba(0,0,0,.25);white-space:nowrap;max-width:90vw;text-overflow:ellipsis;overflow:hidden;}
 .toast.show{transform:translateX(-50%) translateY(0);}
 .toast.green{background:#1a6b3c;}
 .toast.red{background:#8b1a1a;}
-
-/* ADMIN badge */
-.admin-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(75,191,191,.1);color:var(--teal-dark);font-size:12px;font-weight:600;padding:4px 12px;border-radius:100px;margin-bottom:24px;}
-.login-err{color:#c0392b;font-size:13px;display:none;text-align:center;margin-top:4px;}
-
-/* ANIMATIONS */
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(.85);}}
 @keyframes modalIn{from{opacity:0;transform:scale(.95) translateY(16px);}to{opacity:1;transform:scale(1) translateY(0);}}
-
-/* RESPONSIVE */
 @media(max-width:900px){.why-grid{grid-template-columns:1fr;}}
 @media(max-width:800px){.contact-grid{grid-template-columns:1fr;}}
 @media(max-width:768px){
@@ -224,20 +189,19 @@ footer a:hover{color:var(--teal);}
   .checks{grid-template-columns:1fr;}
   .stories-hdr{flex-direction:column;align-items:flex-start;}
 }
-@media(max-width:500px){.biz-grid,.services-grid{grid-template-columns:1fr;}}
+@media(max-width:500px){.biz-grid,.svc-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a class="nav-logo" href="#home"><span class="nav-logo-text">PULASIGN</span></a>
   <ul class="nav-links" id="navLinks">
-    <li><a href="#services"   onclick="closeNav()">Services</a></li>
-    <li><a href="#businesses" onclick="closeNav()">Our Clients</a></li>
-    <li><a href="#stories"    onclick="closeNav()">Stories</a></li>
-    <li><a href="#why"        onclick="closeNav()">Why Us</a></li>
-    <li><a href="#contact"    onclick="closeNav()">Contact</a></li>
+    <li><a href="#services"        onclick="closeNav()">Services</a></li>
+    <li><a href="#businesses"      onclick="closeNav()">Our Clients</a></li>
+    <li><a href="#stories-section" onclick="closeNav()">Stories</a></li>
+    <li><a href="#why"             onclick="closeNav()">Why Us</a></li>
+    <li><a href="#contact"         onclick="closeNav()">Contact</a></li>
     <li><a href="#contact" class="nav-cta" onclick="closeNav()">Get Started</a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleNav()">
@@ -245,7 +209,6 @@ footer a:hover{color:var(--teal);}
   </button>
 </nav>
 
-<!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-bg"></div><div class="hero-bg2"></div>
   <div class="hero-content">
@@ -259,7 +222,6 @@ footer a:hover{color:var(--teal);}
   </div>
 </section>
 
-<!-- STATS -->
 <div class="stats-bar">
   <div class="stat-item"><div class="stat-num" id="statBrands">50+</div><div class="stat-lbl">Brands Promoted</div></div>
   <div class="stat-item"><div class="stat-num">4</div><div class="stat-lbl">Core Services</div></div>
@@ -267,47 +229,21 @@ footer a:hover{color:var(--teal);}
   <div class="stat-item"><div class="stat-num">&#8734;</div><div class="stat-lbl">Growth Potential</div></div>
 </div>
 
-<!-- SERVICES -->
 <section id="services">
-  <div class="services-hdr">
+  <div class="svc-hdr">
     <div class="sec-label">What We Do</div>
     <div class="sec-title">Services That Drive Results</div>
     <div class="sec-sub">From brand identity to logistics, we offer everything your business needs to stand out and grow.</div>
   </div>
-  <div class="services-grid" id="servicesGrid">
-    <div class="svc-card">
-      <div class="svc-icon">📣</div>
-      <div class="svc-name">Marketing</div>
-      <div class="svc-desc">Strategic campaigns designed to reach your ideal customers, increase awareness, and convert leads into loyal clients.</div>
-      <span class="svc-tag">Core Service</span>
-    </div>
-    <div class="svc-card">
-      <div class="svc-icon">🎨</div>
-      <div class="svc-name">Graphic Design</div>
-      <div class="svc-desc">Visual identities, logos, social media assets, and print materials that make your brand unforgettable at every touchpoint.</div>
-      <span class="svc-tag">Core Service</span>
-    </div>
-    <div class="svc-card">
-      <div class="svc-icon">🏷️</div>
-      <div class="svc-name">Promotional Branding</div>
-      <div class="svc-desc">Branded merchandise, event activations, and promotional strategies that keep your business top of mind.</div>
-      <span class="svc-tag">Core Service</span>
-    </div>
-    <div class="svc-card">
-      <div class="svc-icon">🚚</div>
-      <div class="svc-name">Logistics</div>
-      <div class="svc-desc">We connect businesses with their customers through efficient, reliable distribution and personal delivery systems — with an option to transport employees to their destinations.</div>
-      <span class="svc-tag">Core Service</span>
-    </div>
-    <!-- ADD SERVICE CARD -->
-    <div class="svc-card svc-add" id="addSvcCard">
-      <div class="svc-add-icon">+</div>
-      <span>Add New Service</span>
-    </div>
+  <div class="svc-grid" id="svcGrid">
+    <div class="svc-card"><div class="svc-icon">📣</div><div class="svc-name">Marketing</div><div class="svc-desc">Strategic campaigns designed to reach your ideal customers, increase awareness, and convert leads into loyal clients.</div><span class="svc-tag">Core Service</span></div>
+    <div class="svc-card"><div class="svc-icon">🎨</div><div class="svc-name">Graphic Design</div><div class="svc-desc">Visual identities, logos, social media assets, and print materials that make your brand unforgettable at every touchpoint.</div><span class="svc-tag">Core Service</span></div>
+    <div class="svc-card"><div class="svc-icon">🏷️</div><div class="svc-name">Promotional Branding</div><div class="svc-desc">Branded merchandise, event activations, and promotional strategies that keep your business top of mind.</div><span class="svc-tag">Core Service</span></div>
+    <div class="svc-card"><div class="svc-icon">🚚</div><div class="svc-name">Logistics</div><div class="svc-desc">We connect businesses with their customers through efficient, reliable distribution and personal delivery systems — with an option to transport employees to their destinations.</div><span class="svc-tag">Core Service</span></div>
+    <div class="svc-card svc-add" id="addSvcCard"><div class="svc-add-icon">+</div><span>Add New Service</span></div>
   </div>
 </section>
 
-<!-- BUSINESSES -->
 <section id="businesses">
   <div class="biz-hdr">
     <div>
@@ -320,66 +256,45 @@ footer a:hover{color:var(--teal);}
   <div class="biz-grid" id="bizGrid">
     <div class="biz-card" data-biz="nova">
       <div class="biz-banner" style="background:linear-gradient(135deg,#0f4c75,#1b6ca8)"><span class="biz-badge">Technology</span></div>
-      <div class="biz-body">
-        <div class="biz-card-hdr"><div class="biz-logo" style="background:#1b6ca8">N</div><div><div class="biz-name">Nova Tech Solutions</div><div class="biz-tagline">Innovative software for modern businesses</div></div></div>
-        <div class="biz-desc">Custom software, mobile apps and IT infrastructure solutions that help businesses automate and scale efficiently.</div>
-        <div class="biz-tags"><span class="biz-tag">Software Dev</span><span class="biz-tag">Mobile Apps</span><span class="biz-tag">IT Support</span></div>
-        <div class="biz-footer"><span class="biz-loc">📍 Gaborone, BW</span><span class="biz-view">View Profile →</span></div>
-      </div>
+      <div class="biz-body"><div class="biz-card-hdr"><div class="biz-logo" style="background:#1b6ca8">N</div><div><div class="biz-name">Nova Tech Solutions</div><div class="biz-tagline">Innovative software for modern businesses</div></div></div><div class="biz-desc">Custom software, mobile apps and IT infrastructure solutions that help businesses automate and scale efficiently.</div><div class="biz-tags"><span class="biz-tag">Software Dev</span><span class="biz-tag">Mobile Apps</span><span class="biz-tag">IT Support</span></div><div class="biz-footer"><span class="biz-loc">📍 Gaborone, BW</span><span class="biz-view">View Profile →</span></div></div>
     </div>
     <div class="biz-card" data-biz="zara">
       <div class="biz-banner" style="background:linear-gradient(135deg,#7b2d8b,#c56cd6)"><span class="biz-badge">Fashion &amp; Retail</span></div>
-      <div class="biz-body">
-        <div class="biz-card-hdr"><div class="biz-logo" style="background:#7b2d8b">Z</div><div><div class="biz-name">Zara Collections</div><div class="biz-tagline">Fashion that tells your story</div></div></div>
-        <div class="biz-desc">A boutique fashion brand offering premium clothing, accessories and custom design pieces for modern African women and men.</div>
-        <div class="biz-tags"><span class="biz-tag">Clothing</span><span class="biz-tag">Accessories</span><span class="biz-tag">Custom Design</span></div>
-        <div class="biz-footer"><span class="biz-loc">📍 Francistown, BW</span><span class="biz-view">View Profile →</span></div>
-      </div>
+      <div class="biz-body"><div class="biz-card-hdr"><div class="biz-logo" style="background:#7b2d8b">Z</div><div><div class="biz-name">Zara Collections</div><div class="biz-tagline">Fashion that tells your story</div></div></div><div class="biz-desc">A boutique fashion brand offering premium clothing, accessories and custom design pieces for modern African women and men.</div><div class="biz-tags"><span class="biz-tag">Clothing</span><span class="biz-tag">Accessories</span><span class="biz-tag">Custom Design</span></div><div class="biz-footer"><span class="biz-loc">📍 Francistown, BW</span><span class="biz-view">View Profile →</span></div></div>
     </div>
     <div class="biz-card" data-biz="green">
       <div class="biz-banner" style="background:linear-gradient(135deg,#1a6b3c,#2ea05a)"><span class="biz-badge">Food &amp; Beverage</span></div>
-      <div class="biz-body">
-        <div class="biz-card-hdr"><div class="biz-logo" style="background:#1a6b3c">G</div><div><div class="biz-name">Green Plate Café</div><div class="biz-tagline">Fresh, healthy, locally sourced</div></div></div>
-        <div class="biz-desc">A health-forward café serving fresh meals, juices and catering services using locally sourced ingredients.</div>
-        <div class="biz-tags"><span class="biz-tag">Dine-In</span><span class="biz-tag">Takeaway</span><span class="biz-tag">Catering</span></div>
-        <div class="biz-footer"><span class="biz-loc">📍 Maun, BW</span><span class="biz-view">View Profile →</span></div>
-      </div>
+      <div class="biz-body"><div class="biz-card-hdr"><div class="biz-logo" style="background:#1a6b3c">G</div><div><div class="biz-name">Green Plate Café</div><div class="biz-tagline">Fresh, healthy, locally sourced</div></div></div><div class="biz-desc">A health-forward café serving fresh meals, juices and catering services using locally sourced ingredients.</div><div class="biz-tags"><span class="biz-tag">Dine-In</span><span class="biz-tag">Takeaway</span><span class="biz-tag">Catering</span></div><div class="biz-footer"><span class="biz-loc">📍 Maun, BW</span><span class="biz-view">View Profile →</span></div></div>
     </div>
-    <div class="add-biz" id="addBizCard">
-      <div style="text-align:center;color:#8aa8a8;">
-        <div style="font-size:36px;margin-bottom:12px;">+</div>
-        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:16px;color:var(--teal);margin-bottom:6px;">List Your Business</div>
-        <div style="font-size:13px;">Get your brand featured here</div>
-      </div>
-    </div>
+    <div class="add-biz" id="addBizCard"><div style="text-align:center;color:#8aa8a8;"><div style="font-size:36px;margin-bottom:12px;">+</div><div style="font-family:'Syne',sans-serif;font-weight:700;font-size:16px;color:var(--teal);margin-bottom:6px;">List Your Business</div><div style="font-size:13px;">Get your brand featured here</div></div></div>
   </div>
 </section>
 
 <!-- STORIES -->
-<section id="stories" style="padding:80px 0 80px 6vw;">
+<div id="stories-section" style="background:var(--ink);padding:80px 0 80px 6vw;overflow:hidden;">
   <div class="stories-hdr">
     <div>
       <div class="sec-label" style="color:var(--teal-light)">In The Spotlight</div>
       <div class="sec-title" style="color:#fff;">Brand Stories</div>
-      <div class="sec-sub" style="color:rgba(255,255,255,.5);">Behind the scenes moments, launches and highlights from businesses we work with.</div>
+      <div class="sec-sub" style="color:rgba(255,255,255,.5);">Behind the scenes moments, launches and highlights. Stories disappear after 24 hours.</div>
     </div>
-    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding-right:6vw;">
       <div class="scroll-btns">
-        <button class="scroll-btn" id="scrollLeft" title="Previous">&#8592;</button>
-        <button class="scroll-btn" id="scrollRight" title="Next">&#8594;</button>
+        <button class="scroll-btn" id="scrollLeft">&#8592;</button>
+        <button class="scroll-btn" id="scrollRight">&#8594;</button>
       </div>
       <button class="admin-btn" id="adminBtn">&#x1F512; Admin</button>
     </div>
   </div>
-  <div class="stories-track" id="storiesTrack">
-    <div class="story-empty" id="storiesEmpty">
+  <div id="storiesLoading" class="stories-loading" style="padding-left:0;">Loading stories...</div>
+  <div class="stories-track" id="storiesTrack" style="display:none;">
+    <div class="story-empty" id="storiesEmpty" style="display:none;">
       <div style="font-size:32px;">📸</div>
       <span>No stories yet</span>
     </div>
   </div>
-</section>
+</div>
 
-<!-- WHY -->
 <section id="why">
   <div>
     <div class="sec-label" style="color:var(--teal-light)">Why Choose Us</div>
@@ -387,14 +302,13 @@ footer a:hover{color:var(--teal);}
     <div class="sec-sub">We don't just design. We think, strategise and deliver work that actually moves the needle.</div>
   </div>
   <div class="why-grid">
-    <div class="why-item"><div class="why-num">01</div><div class="why-text"><h3>Always Up to Date</h3><p>Your business profile is a living page. As you grow, we update your presence on the platform instantly.</p></div></div>
-    <div class="why-item"><div class="why-num">02</div><div class="why-text"><h3>Multi-Channel Reach</h3><p>From social media to print campaigns to digital ads — we reach your customers wherever they are.</p></div></div>
+    <div class="why-item"><div class="why-num">01</div><div class="why-text"><h3>Always Up to Date</h3><p>Your business profile is a living page. As you grow, we update your presence instantly.</p></div></div>
+    <div class="why-item"><div class="why-num">02</div><div class="why-text"><h3>Multi-Channel Reach</h3><p>From social media to print campaigns — we reach your customers wherever they are.</p></div></div>
     <div class="why-item"><div class="why-num">03</div><div class="why-text"><h3>Design That Sells</h3><p>Our design work isn't just beautiful — it's strategic. Every visual choice drives action.</p></div></div>
-    <div class="why-item"><div class="why-num">04</div><div class="why-text"><h3>Dedicated Support</h3><p>You get a real partner, not just a service. We work closely with every client to deliver on their goals.</p></div></div>
+    <div class="why-item"><div class="why-num">04</div><div class="why-text"><h3>Dedicated Support</h3><p>You get a real partner. We work closely with every client to deliver on their goals.</p></div></div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="contact-grid">
     <div>
@@ -406,7 +320,7 @@ footer a:hover{color:var(--teal);}
       <a href="https://wa.me/26774430806" target="_blank" rel="noopener" class="ci"><div class="ci-icon">💬</div><div><div class="ci-label">WhatsApp</div><div class="ci-value">Chat with us directly →</div></div></a>
       <div class="ci" style="cursor:default;"><div class="ci-icon">📍</div><div><div class="ci-label">Location</div><div class="ci-value">Botswana</div></div></div>
     </div>
-    <form id="contactForm">
+    <form id="contactForm" class="contact-form">
       <div class="form-row">
         <div class="form-group"><label class="form-label">Your Name *</label><input class="form-input" id="cf_name" type="text" placeholder="John Doe" required></div>
         <div class="form-group"><label class="form-label">Business Name</label><input class="form-input" id="cf_biz" type="text" placeholder="My Company"></div>
@@ -430,24 +344,19 @@ footer a:hover{color:var(--teal);}
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div><div class="footer-logo">PULASIGN</div><div class="footer-tag">All about your brand.</div></div>
   <p>&copy; 2026 Pulasign. All rights reserved.</p>
   <div style="display:flex;gap:20px;">
     <a href="#services">Services</a>
     <a href="#businesses">Clients</a>
-    <a href="#stories">Stories</a>
+    <a href="#stories-section">Stories</a>
     <a href="#contact">Contact</a>
   </div>
 </footer>
 
-<!-- ═══ MODALS ═══ -->
-
-<!-- BIZ PROFILE -->
-<div class="overlay" id="bizOverlay">
-  <div class="modal" id="bizModal"></div>
-</div>
+<!-- BIZ PROFILE MODAL -->
+<div class="overlay" id="bizOverlay"><div class="modal" id="bizModal"></div></div>
 
 <!-- LIST YOUR BUSINESS -->
 <div class="overlay" id="listOverlay">
@@ -549,7 +458,7 @@ footer a:hover{color:var(--teal);}
     <button class="modal-x" id="postClose">&#x2715;</button>
     <div class="modal-icon">📸</div>
     <h2>Post a Story</h2>
-    <p class="modal-sub">Share a photo or video about a business.</p>
+    <p class="modal-sub">Share a photo or video. It will disappear after 24 hours.</p>
     <div style="display:flex;flex-direction:column;gap:14px;">
       <div class="form-group">
         <label class="form-label">Photo or Video *</label>
@@ -563,18 +472,17 @@ footer a:hover{color:var(--teal);}
   </div>
 </div>
 
-<!-- TOAST -->
 <div class="toast" id="toast"></div>
 
 <script>
 // ═══════════════════════════════════════════════════
 // CONFIG
 // ═══════════════════════════════════════════════════
-var SUPA_URL  = 'https://aioskruudouuasxecrcw.supabase.co';
-var SUPA_KEY  = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFpb3NrcnV1ZG91dWFzeGVjcmN3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUzOTg0NjQsImV4cCI6MjA5MDk3NDQ2NH0.2Xovv_pbJhQhquEdefkm92WyCiqAjaQGVnRisTBCZbo';
+var SUPA_URL       = 'https://aioskruudouuasxecrcw.supabase.co';
+var SUPA_KEY       = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFpb3NrcnV1ZG91dWFzeGVjcmN3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUzOTg0NjQsImV4cCI6MjA5MDk3NDQ2NH0.2Xovv_pbJhQhquEdefkm92WyCiqAjaQGVnRisTBCZbo';
 var PULASIGN_EMAIL = 'Pulasign96@gmail.com';
-var ADMIN_USER = 'pulasign';
-var ADMIN_PASS = 'pula2026';
+var ADMIN_USER     = 'pulasign';
+var ADMIN_PASS     = 'pula2026';
 
 // ═══════════════════════════════════════════════════
 // STATE
@@ -585,33 +493,16 @@ var stories = [];
 var dynamicBiz = {};
 
 // ═══════════════════════════════════════════════════
-// SUPABASE HELPER
-// ═══════════════════════════════════════════════════
-async function dbSave(table, data) {
-  try {
-    var r = await fetch(SUPA_URL + '/rest/v1/' + table, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'apikey': SUPA_KEY, 'Authorization': 'Bearer ' + SUPA_KEY, 'Prefer': 'return=minimal' },
-      body: JSON.stringify(data)
-    });
-    return r.ok;
-  } catch(e) { return false; }
-}
-
-// ═══════════════════════════════════════════════════
-// TOAST
+// HELPERS
 // ═══════════════════════════════════════════════════
 function toast(msg, type) {
   var t = document.getElementById('toast');
   t.textContent = msg;
   t.className = 'toast show' + (type ? ' ' + type : '');
   clearTimeout(t._t);
-  t._t = setTimeout(function(){ t.classList.remove('show'); }, 3500);
+  t._t = setTimeout(function(){ t.classList.remove('show'); }, 4000);
 }
 
-// ═══════════════════════════════════════════════════
-// OVERLAY / MODAL HELPERS
-// ═══════════════════════════════════════════════════
 function openOverlay(id) {
   var el = document.getElementById(id);
   if (el) { el.classList.add('open'); document.body.style.overflow = 'hidden'; }
@@ -621,7 +512,7 @@ function closeOverlay(id) {
   if (el) { el.classList.remove('open'); document.body.style.overflow = ''; }
 }
 
-// Close on backdrop click
+// Backdrop click closes overlay
 document.addEventListener('click', function(e) {
   ['bizOverlay','listOverlay','svcOverlay','adminOverlay','postOverlay'].forEach(function(id) {
     var el = document.getElementById(id);
@@ -629,14 +520,13 @@ document.addEventListener('click', function(e) {
   });
 });
 
-// Close on Escape
+// Escape key
 document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
+  if (e.key === 'Escape')
     ['bizOverlay','listOverlay','svcOverlay','adminOverlay','postOverlay'].forEach(closeOverlay);
-  }
 });
 
-// Wire up all X close buttons
+// X buttons
 document.getElementById('listClose').onclick  = function(){ closeOverlay('listOverlay'); };
 document.getElementById('svcClose').onclick   = function(){ closeOverlay('svcOverlay'); };
 document.getElementById('adminClose').onclick = function(){ closeOverlay('adminOverlay'); };
@@ -649,7 +539,38 @@ function toggleNav() { document.getElementById('navLinks').classList.toggle('ope
 function closeNav()  { document.getElementById('navLinks').classList.remove('open'); }
 
 // ═══════════════════════════════════════════════════
-// BUSINESS DATA
+// SUPABASE — save record
+// ═══════════════════════════════════════════════════
+async function dbSave(table, data) {
+  try {
+    var r = await fetch(SUPA_URL + '/rest/v1/' + table, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': SUPA_KEY,
+        'Authorization': 'Bearer ' + SUPA_KEY,
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify(data)
+    });
+    return r.ok;
+  } catch(e) { console.error('dbSave error:', e); return false; }
+}
+
+// ═══════════════════════════════════════════════════
+// SUPABASE — delete story record
+// ═══════════════════════════════════════════════════
+async function deleteStoryFromDB(id) {
+  try {
+    await fetch(SUPA_URL + '/rest/v1/stories?id=eq.' + encodeURIComponent(id), {
+      method: 'DELETE',
+      headers: { 'apikey': SUPA_KEY, 'Authorization': 'Bearer ' + SUPA_KEY }
+    });
+  } catch(e) { console.error('deleteStoryFromDB error:', e); }
+}
+
+// ═══════════════════════════════════════════════════
+// BUSINESS PROFILES
 // ═══════════════════════════════════════════════════
 var bizDB = {
   nova:  { letter:'N', color:'#1b6ca8', name:'Nova Tech Solutions', tagline:'Innovative software for modern businesses', category:'Technology', location:'Gaborone, Botswana', about:'Nova Tech Solutions is a full-service technology company delivering custom software, mobile applications and IT infrastructure services. Founded in 2019, they have served over 80 businesses across Botswana.', services:['Custom Software Dev','Mobile App Development','IT Infrastructure','Cloud Solutions','Tech Support'], phone:'+267 71 234 567', email:'info@novatechbw.com', website:'novatechbw.com' },
@@ -664,11 +585,9 @@ function openBizProfile(id) {
   document.getElementById('bizModal').innerHTML =
     '<button class="modal-x" onclick="closeOverlay(\'bizOverlay\')">&#x2715;</button>'+
     '<div style="width:72px;height:72px;border-radius:18px;background:'+b.color+';display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;font-size:28px;color:#fff;margin-bottom:20px;">'+b.letter+'</div>'+
-    '<h2>'+b.name+'</h2>'+
-    '<p class="modal-sub">'+b.tagline+' &middot; '+b.category+'</p>'+
+    '<h2>'+b.name+'</h2><p class="modal-sub">'+b.tagline+' &middot; '+b.category+'</p>'+
     '<div class="modal-sec">About</div><p class="modal-desc">'+b.about+'</p>'+
-    '<div class="modal-sec">Services Offered</div>'+
-    '<div class="pills">'+b.services.map(function(s){return '<span class="pill">'+s+'</span>';}).join('')+'</div>'+
+    '<div class="modal-sec">Services Offered</div><div class="pills">'+b.services.map(function(s){return '<span class="pill">'+s+'</span>';}).join('')+'</div>'+
     '<div class="modal-sec">Contact</div>'+
     '<div class="detail-grid">'+
       '<div class="detail-box"><div class="detail-lbl">Phone</div><div class="detail-val"><a href="tel:'+b.phone+'">'+b.phone+'</a></div></div>'+
@@ -679,14 +598,9 @@ function openBizProfile(id) {
   openOverlay('bizOverlay');
 }
 
-// Wire biz card clicks
 document.querySelectorAll('.biz-card').forEach(function(card) {
-  card.addEventListener('click', function() {
-    openBizProfile(this.dataset.biz);
-  });
+  card.addEventListener('click', function() { openBizProfile(this.dataset.biz); });
 });
-
-// Wire add-biz card click
 document.getElementById('addBizCard').addEventListener('click', function() { openListModal(); });
 document.getElementById('listBizBtn').addEventListener('click', function() { openListModal(); });
 
@@ -726,46 +640,30 @@ document.getElementById('listForm').addEventListener('submit', async function(e)
   var web     = document.getElementById('lf_web').value.trim();
   var desc    = document.getElementById('lf_desc').value.trim();
   var checked = Array.from(document.querySelectorAll('#listForm input[type=checkbox]:checked')).map(function(i){ return i.value; });
-
   if (!cat) { toast('Please select a category', 'red'); return; }
-
   var btn = document.getElementById('listSubmitBtn');
   btn.textContent = 'Saving...'; btn.disabled = true;
-
   var saved = await dbSave('businesses', { name:name, category:cat, contact_person:contact, location:loc, phone:phone, email:email, website:web||null, description:desc, services:checked.join(', ')||null, color:selectedColor });
-
   var subj = encodeURIComponent('New Business Listing: ' + name);
   var body = encodeURIComponent('BUSINESS LISTING\n\nName: '+name+'\nCategory: '+cat+'\nLocation: '+loc+'\nContact: '+contact+'\nPhone: '+phone+'\nEmail: '+email+'\nWebsite: '+(web||'N/A')+'\n\nDescription:\n'+desc+'\n\nServices: '+(checked.join(', ')||'Not specified')+'\nColour: '+selectedColor);
   window.location.href = 'mailto:'+PULASIGN_EMAIL+'?subject='+subj+'&body='+body;
-
   btn.textContent = 'Submit My Business →'; btn.disabled = false;
-
   // Live preview card
-  var bizId = 'dyn_' + Date.now();
+  var bizId = 'dyn_'+Date.now();
   dynamicBiz[bizId] = { letter:name[0].toUpperCase(), color:selectedColor, name:name, tagline:cat, category:cat, location:loc, about:desc, services:checked.length?checked:['Coming soon'], phone:phone, email:email, website:web };
-
   var grid = document.getElementById('bizGrid');
   var addCard = document.getElementById('addBizCard');
   var card = document.createElement('div');
   card.className = 'biz-card'; card.dataset.biz = bizId;
   var sd = desc.length>110 ? desc.substring(0,110)+'...' : desc;
-  card.innerHTML =
-    '<div class="biz-banner" style="background:linear-gradient(135deg,'+selectedColor+'bb,'+selectedColor+')"><span class="biz-badge">'+cat+'</span></div>'+
-    '<div class="biz-body">'+
-      '<div class="biz-card-hdr"><div class="biz-logo" style="background:'+selectedColor+'">'+name[0].toUpperCase()+'</div><div><div class="biz-name">'+name+'</div><div class="biz-tagline">'+cat+'</div></div></div>'+
-      '<div class="biz-desc">'+sd+'</div>'+
-      '<div class="biz-tags">'+checked.slice(0,3).map(function(s){return '<span class="biz-tag">'+s+'</span>';}).join('')+'</div>'+
-      '<div class="biz-footer"><span class="biz-loc">📍 '+loc+'</span><span class="biz-view">View Profile →</span></div>'+
-    '</div>';
+  card.innerHTML = '<div class="biz-banner" style="background:linear-gradient(135deg,'+selectedColor+'bb,'+selectedColor+')"><span class="biz-badge">'+cat+'</span></div><div class="biz-body"><div class="biz-card-hdr"><div class="biz-logo" style="background:'+selectedColor+'">'+name[0].toUpperCase()+'</div><div><div class="biz-name">'+name+'</div><div class="biz-tagline">'+cat+'</div></div></div><div class="biz-desc">'+sd+'</div><div class="biz-tags">'+checked.slice(0,3).map(function(s){return '<span class="biz-tag">'+s+'</span>';}).join('')+'</div><div class="biz-footer"><span class="biz-loc">📍 '+loc+'</span><span class="biz-view">View Profile →</span></div></div>';
   card.addEventListener('click', function(){ openBizProfile(this.dataset.biz); });
   grid.insertBefore(card, addCard);
-
   document.getElementById('listForm').style.display = 'none';
   document.getElementById('listSuccess').style.display = 'flex';
-  toast(saved ? 'Business saved to database!' : 'Submitted! (DB save failed — check Supabase)', saved ? 'green' : 'red');
-
+  toast(saved ? 'Business saved to database!' : 'Submitted! (check Supabase if DB failed)', saved?'green':'red');
   var s = document.getElementById('statBrands');
-  if (s) { s.textContent = (parseInt(s.textContent)||50)+1+'+'; }
+  if (s) s.textContent = (parseInt(s.textContent)||50)+1+'+';
 });
 
 // ═══════════════════════════════════════════════════
@@ -777,14 +675,13 @@ document.getElementById('addSvcCard').addEventListener('click', function() {
   document.getElementById('as_icon').value = '';
   openOverlay('svcOverlay');
 });
-
 document.getElementById('svcConfirmBtn').addEventListener('click', function() {
   var name = document.getElementById('as_name').value.trim();
   var desc = document.getElementById('as_desc').value.trim();
   var icon = document.getElementById('as_icon').value.trim() || '✨';
   if (!name) { toast('Please enter a service name', 'red'); return; }
   if (!desc) { toast('Please enter a description', 'red'); return; }
-  var grid = document.getElementById('servicesGrid');
+  var grid = document.getElementById('svcGrid');
   var add  = document.getElementById('addSvcCard');
   var card = document.createElement('div');
   card.className = 'svc-card';
@@ -810,7 +707,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
   var subj = encodeURIComponent('Pulasign Enquiry - ' + service);
   var body = encodeURIComponent('Hi Pulasign,\n\nName: '+name+(biz?'\nBusiness: '+biz:'')+'\nService: '+service+'\n\nMessage:\n'+msg+'\n\nReply to: '+email);
   window.location.href = 'mailto:'+PULASIGN_EMAIL+'?subject='+subj+'&body='+body;
-  toast(saved ? 'Saved! Email app opening...' : 'Email opening (DB save failed)', saved?'green':'red');
+  toast(saved ? 'Saved! Email app opening...' : 'Email opening (check Supabase)', saved?'green':'red');
   btn.textContent = 'Send Message →'; btn.disabled = false;
   this.reset();
 });
@@ -819,14 +716,11 @@ document.getElementById('contactForm').addEventListener('submit', async function
 // ADMIN LOGIN
 // ═══════════════════════════════════════════════════
 document.getElementById('adminBtn').addEventListener('click', function() {
-  if (isAdmin) {
-    openPostStory();
-  } else {
-    document.getElementById('adUser').value = '';
-    document.getElementById('adPass').value = '';
-    document.getElementById('loginErr').style.display = 'none';
-    openOverlay('adminOverlay');
-  }
+  if (isAdmin) { openPostStory(); return; }
+  document.getElementById('adUser').value = '';
+  document.getElementById('adPass').value = '';
+  document.getElementById('loginErr').style.display = 'none';
+  openOverlay('adminOverlay');
 });
 
 document.getElementById('adminLoginBtn').addEventListener('click', function() {
@@ -836,24 +730,21 @@ document.getElementById('adminLoginBtn').addEventListener('click', function() {
     isAdmin = true;
     closeOverlay('adminOverlay');
     document.body.classList.add('admin-on');
-    var btn = document.getElementById('adminBtn');
-    btn.textContent = '+ Post Story';
-    btn.classList.add('active');
-    // Add logout
+    var adminBtn = document.getElementById('adminBtn');
+    adminBtn.textContent = '+ Post Story';
+    adminBtn.classList.add('active');
     if (!document.getElementById('logoutBtn')) {
       var lb = document.createElement('button');
       lb.id = 'logoutBtn'; lb.className = 'logout-btn'; lb.textContent = 'Logout';
       lb.onclick = function() {
         isAdmin = false;
         document.body.classList.remove('admin-on');
-        btn.textContent = '🔒 Admin'; btn.classList.remove('active');
-        btn.onclick = null;
+        adminBtn.textContent = '🔒 Admin';
+        adminBtn.classList.remove('active');
         lb.remove();
-        // Re-attach login handler
-        document.getElementById('adminBtn').onclick = null;
         toast('Logged out.', '');
       };
-      btn.parentNode.insertBefore(lb, btn.nextSibling);
+      adminBtn.parentNode.insertBefore(lb, adminBtn.nextSibling);
     }
     toast('Welcome back, Admin!', 'green');
     openPostStory();
@@ -862,13 +753,12 @@ document.getElementById('adminLoginBtn').addEventListener('click', function() {
   }
 });
 
-// Allow Enter key on password field
 document.getElementById('adPass').addEventListener('keydown', function(e) {
   if (e.key === 'Enter') document.getElementById('adminLoginBtn').click();
 });
 
 // ═══════════════════════════════════════════════════
-// POST STORY
+// POST STORY — uploads to Supabase Storage
 // ═══════════════════════════════════════════════════
 function openPostStory() {
   document.getElementById('st_biz').value = '';
@@ -887,57 +777,87 @@ document.getElementById('storyFile').addEventListener('change', function() {
     if (file.type.startsWith('video/')) {
       prev.innerHTML = '<video src="'+ev.target.result+'" controls style="width:100%;height:100%;object-fit:cover;border-radius:12px;"></video>';
     } else {
-      prev.innerHTML = '<img src="'+ev.target.result+'" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">';
+      prev.innerHTML = '<img src="'+ev.target.result+'" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" alt="preview">';
     }
   };
   reader.readAsDataURL(file);
 });
 
-document.getElementById('postStoryBtn').addEventListener('click', function() {
+document.getElementById('postStoryBtn').addEventListener('click', async function() {
   if (!isAdmin) return;
   var biz  = document.getElementById('st_biz').value.trim();
   var cap  = document.getElementById('st_cap').value.trim();
   var file = document.getElementById('storyFile').files[0];
   if (!biz)  { toast('Please enter a business name', 'red'); return; }
   if (!file) { toast('Please select a photo or video', 'red'); return; }
-  var btn = this; btn.textContent = 'Posting...'; btn.disabled = true;
-  var reader = new FileReader();
-  reader.onload = function(ev) {
-    var story = { id:'s_'+Date.now(), biz:biz, cap:cap, src:ev.target.result, type:file.type.startsWith('video/')?'video':'image', date:new Date().toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}) };
+  var btn = this;
+  btn.textContent = 'Uploading...'; btn.disabled = true;
+  try {
+    // Upload to Supabase Storage bucket "stories"
+    var safeFileName = Date.now() + '_' + file.name.replace(/[^a-zA-Z0-9._-]/g, '_');
+    var uploadRes = await fetch(SUPA_URL + '/storage/v1/object/stories/' + safeFileName, {
+      method: 'POST',
+      headers: { 'apikey': SUPA_KEY, 'Authorization': 'Bearer ' + SUPA_KEY, 'Content-Type': file.type },
+      body: file
+    });
+    if (!uploadRes.ok) {
+      var errText = await uploadRes.text();
+      console.error('Storage error:', errText);
+      throw new Error('Storage upload failed. Make sure the "stories" bucket exists and is public in Supabase.');
+    }
+    var mediaUrl = SUPA_URL + '/storage/v1/object/public/stories/' + safeFileName;
+    var story = {
+      id:         's_' + Date.now(),
+      biz:        biz,
+      cap:        cap,
+      media_url:  mediaUrl,
+      type:       file.type.startsWith('video/') ? 'video' : 'image',
+      created_at: new Date().toISOString()
+    };
+    var saved = await dbSave('stories', story);
+    if (!saved) throw new Error('Failed to save story to database. Check your stories table in Supabase.');
     stories.push(story);
     renderStory(story);
     closeOverlay('postOverlay');
-    toast('Story posted!', 'green');
-    btn.textContent = 'Post Story →'; btn.disabled = false;
-  };
-  reader.readAsDataURL(file);
+    toast('Story posted! Visible to everyone.', 'green');
+  } catch(err) {
+    console.error('Post story error:', err);
+    toast(err.message, 'red');
+  }
+  btn.textContent = 'Post Story →'; btn.disabled = false;
 });
 
+// ═══════════════════════════════════════════════════
+// RENDER STORY
+// ═══════════════════════════════════════════════════
 function renderStory(story) {
   var empty = document.getElementById('storiesEmpty');
   if (empty) empty.style.display = 'none';
   var track = document.getElementById('storiesTrack');
   var card  = document.createElement('div');
   card.className = 'story-card'; card.id = story.id;
+  var src   = story.media_url || story.src || '';
   var media = story.type === 'video'
-    ? '<video class="story-vid" src="'+story.src+'" controls playsinline></video>'
-    : '<img class="story-img" src="'+story.src+'" alt="'+story.biz+'">';
+    ? '<video class="story-vid" src="'+src+'" controls playsinline></video>'
+    : '<img class="story-img" src="'+src+'" alt="'+story.biz+'" loading="lazy">';
+  var dateStr = '';
+  if (story.created_at) dateStr = new Date(story.created_at).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
   card.innerHTML =
     '<button class="story-del" data-id="'+story.id+'" title="Delete">&#x2715;</button>'+
     media+
-    '<div class="story-body">'+
-      '<div class="story-biz">'+story.biz+'</div>'+
-      (story.cap ? '<div class="story-cap">'+story.cap+'</div>' : '')+
-      '<div class="story-date">'+story.date+'</div>'+
-    '</div>';
-  card.querySelector('.story-del').addEventListener('click', function(e) {
+    '<div class="story-body"><div class="story-biz">'+story.biz+'</div>'+(story.cap?'<div class="story-cap">'+story.cap+'</div>':'')+(dateStr?'<div class="story-date">'+dateStr+'</div>':'')+'</div>';
+  card.querySelector('.story-del').addEventListener('click', async function(e) {
     e.stopPropagation();
     if (!isAdmin) return;
     if (!confirm('Delete this story?')) return;
     var id = this.dataset.id;
+    await deleteStoryFromDB(id);
     stories = stories.filter(function(s){ return s.id !== id; });
     var c = document.getElementById(id); if (c) c.remove();
-    if (stories.length === 0 && empty) empty.style.display = 'flex';
+    if (stories.length === 0) {
+      var empty = document.getElementById('storiesEmpty');
+      if (empty) empty.style.display = 'flex';
+    }
     toast('Story deleted.', '');
   });
   var empty2 = document.getElementById('storiesEmpty');
@@ -946,7 +866,49 @@ function renderStory(story) {
 }
 
 // ═══════════════════════════════════════════════════
-// SCROLL ARROWS + DRAG
+// LOAD STORIES — fetches from DB, auto-deletes >24h
+// ═══════════════════════════════════════════════════
+async function loadStories() {
+  var loading = document.getElementById('storiesLoading');
+  var track   = document.getElementById('storiesTrack');
+  var empty   = document.getElementById('storiesEmpty');
+  try {
+    var res  = await fetch(SUPA_URL + '/rest/v1/stories?select=*&order=created_at.desc', {
+      headers: { 'apikey': SUPA_KEY, 'Authorization': 'Bearer ' + SUPA_KEY }
+    });
+    var data = await res.json();
+    if (loading) loading.style.display = 'none';
+    if (track)   track.style.display   = 'flex';
+    if (!Array.isArray(data) || data.length === 0) {
+      if (empty) empty.style.display = 'flex';
+      return;
+    }
+    var now = new Date();
+    var fresh = [];
+    for (var i = 0; i < data.length; i++) {
+      var story = data[i];
+      var created = new Date(story.created_at);
+      var hoursOld = (now - created) / (1000 * 60 * 60);
+      if (hoursOld > 24) {
+        // Auto-delete expired story silently
+        deleteStoryFromDB(story.id);
+        continue;
+      }
+      fresh.push(story);
+      stories.push(story);
+      renderStory(story);
+    }
+    if (fresh.length === 0 && empty) empty.style.display = 'flex';
+  } catch(e) {
+    console.error('loadStories error:', e);
+    if (loading) loading.style.display = 'none';
+    if (track)   track.style.display   = 'flex';
+    if (empty)   empty.style.display   = 'flex';
+  }
+}
+
+// ═══════════════════════════════════════════════════
+// SCROLL ARROWS + DRAG TO SCROLL
 // ═══════════════════════════════════════════════════
 document.getElementById('scrollLeft').addEventListener('click', function() {
   document.getElementById('storiesTrack').scrollBy({ left: -320, behavior: 'smooth' });
@@ -954,16 +916,19 @@ document.getElementById('scrollLeft').addEventListener('click', function() {
 document.getElementById('scrollRight').addEventListener('click', function() {
   document.getElementById('storiesTrack').scrollBy({ left: 320, behavior: 'smooth' });
 });
-
 (function() {
   var track = document.getElementById('storiesTrack');
   var isDown = false, startX, sl;
   track.addEventListener('mousedown',  function(e){ isDown=true; startX=e.pageX-track.offsetLeft; sl=track.scrollLeft; });
   track.addEventListener('mouseleave', function(){ isDown=false; });
   track.addEventListener('mouseup',    function(){ isDown=false; });
-  track.addEventListener('mousemove',  function(e){ if(!isDown)return; e.preventDefault(); track.scrollLeft = sl-(e.pageX-track.offsetLeft-startX)*1.5; });
+  track.addEventListener('mousemove',  function(e){ if(!isDown)return; e.preventDefault(); track.scrollLeft=sl-(e.pageX-track.offsetLeft-startX)*1.5; });
 })();
 
+// ═══════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════
+loadStories();
 </script>
 </body>
 </html>
